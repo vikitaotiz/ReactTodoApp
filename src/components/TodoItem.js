@@ -1,7 +1,7 @@
-const TodoItem = () => {
+const TodoItem = ({ todo }) => {
     return (
-        <div>
-            Todo Item
+        <div className="pad2">
+            {todo.text}
         </div>
     )
 }

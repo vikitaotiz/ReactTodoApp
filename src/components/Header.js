@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <div>
-            <input type="text" placeholder="Add Todo..."/>
+            Todos Application
         </div>
     )
 }
