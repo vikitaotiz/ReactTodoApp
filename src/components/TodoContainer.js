@@ -16,12 +16,18 @@ const TodoContainer = () => {
     ]);
 
     const toggleTodo = (id) => {
-        setTodos(todos.map((todo) => todo.id === id ? {...todo, completed: !todo.completed} : todo))
-    }
+        setTodos(todos.map((todo) => todo.id === id ? { ...todo, completed: !todo.completed } : todo))
+    };
 
     const removeTodo = (id) => {
-      setTodos(todos.filter((todo) => todo.id !== id));
-    }
+        setTodos(todos.filter((todo) => todo.id !== id));
+    };
+
+    const addTodo = (todo) => {
+        const newId = todos.length + 1;
+        todo.id = newId;
+        setTodos([...todos, todo])
+    };
 
     return (
         <div>
@@ -29,9 +35,12 @@ const TodoContainer = () => {
             <div className="primary full-height pad1"><Navbar/></div>
                 <div className="full-height pad">
                     <Header />
-                    <InputTodo/>
+                    <InputTodo addTodo={addTodo} />
                     {todos.length > 0 ?
-                        <TodosList todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo} /> : 'No Todos'
+                        <TodosList todos={todos}
+                            toggleTodo={toggleTodo}
+                            removeTodo={removeTodo}
+                        /> : 'No Todos'
                     }
                 </div>
           </div>

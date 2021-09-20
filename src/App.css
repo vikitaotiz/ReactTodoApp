@@ -49,3 +49,13 @@ body {
   border: none;
   cursor: pointer;
 }
+
+.todoItem {
+  font-weight: bold;
+}
+
+.doneTodo {
+  color: grey;
+  text-decoration: line-through;
+  font-weight: lighter;
+}
