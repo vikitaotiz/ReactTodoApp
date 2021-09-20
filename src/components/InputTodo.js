@@ -8,6 +8,8 @@ const InputTodo = ({ addTodo }) => {
           const todo = { text, completed: false }; 
           addTodo(todo);
           setText('')
+      } else {
+          alert('Type in valid todo!')
       }
     }
 

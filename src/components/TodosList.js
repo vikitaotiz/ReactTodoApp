@@ -1,6 +1,6 @@
 import TodoItem from "./TodoItem";
 
-const TodosList = ({ todos, toggleTodo, removeTodo}) => {
+const TodosList = ({ todos, toggleTodo, removeTodo, upateTodo}) => {
     return (
         <div>
             {todos.map((todo) => {
@@ -8,6 +8,7 @@ const TodosList = ({ todos, toggleTodo, removeTodo}) => {
                     todo={todo}
                     toggleTodo={toggleTodo}
                     removeTodo={removeTodo}
+                    upateTodo={upateTodo}
                 />
             })}
         </div>
