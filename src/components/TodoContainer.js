@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Header from "./Header";
@@ -7,20 +7,22 @@ import TodosList from "./TodosList";
 import About from "./About";
 
 const TodoContainer = () => {
-    const [todos, setTodos] = useState([
-        { id: 1, text: 'Todos One', completed: false },
-        { id: 2, text: 'Todos Two', completed: true },
-        { id: 3, text: 'Todos Three', completed: false },
-        { id: 4, text: 'Todos Four', completed: true },
-        { id: 5, text: 'Todos Five', completed: false },
-        { id: 6, text: 'Todos Six', completed: true },
-        { id: 7, text: 'Todos Seven', completed: false },
-    ]);
+    
+    const [todos, setTodos] = useState([]);
+
+    useEffect(() => {
+        const data = localStorage.getItem('todos');
+        if (data) setTodos(JSON.parse(data));
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos))
+    }, [todos]);
 
     const toggleTodo = (id) => {
         setTodos(todos.map((todo) => todo.id === id ? { ...todo, completed: !todo.completed } : todo))
     };
-
+            
     const removeTodo = (id) => {
         setTodos(todos.filter((todo) => todo.id !== id));
     };
