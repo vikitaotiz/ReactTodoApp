@@ -14,11 +14,11 @@ const TodoContainer = () => {
   }, []);
   
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))
+    localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
   
   const toggleTodo = (id) => {
-    setTodos(todos.map((todo) => todo.id === id ? { ...todo, completed: !todo.completed } : todo))
+    setTodos(todos.map((todo) => todo.id === id ? { ...todo, completed: !todo.completed } : todo));
   };
           
   const removeTodo = (id) => {
@@ -28,11 +28,11 @@ const TodoContainer = () => {
   const addTodo = (todo) => {
     const newId = todos.length + 1;
     todo.id = newId;
-    setTodos([...todos, todo])
+    setTodos([...todos, todo]);
   };
   
   const upateTodo = (id, data) => {
-    setTodos(todos.map((todo) => todo.id === id ? { ...todo, text: data } : todo))
+    setTodos(todos.map((todo) => todo.id === id ? { ...todo, text: data } : todo));
   };
 
   return (
@@ -60,6 +60,6 @@ const TodoContainer = () => {
       </div>
     </Router>
   );
-}
+};
 
 export default TodoContainer;

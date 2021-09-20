@@ -13,6 +13,6 @@ const TodosList = ({ todos, toggleTodo, removeTodo, upateTodo}) => {
       })}
     </div>
   );
-}
+};
 
 export default TodosList;

@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
 const InputTodo = ({ addTodo }) => {
-  const [text, setText] = useState('');  
+  const [text, setText] = useState('');
   const newTodo = () => {
     if (text) {
-      const todo = { text, completed: false }; 
+      const todo = { text, completed: false };
       addTodo(todo);
-      setText('')
+      setText('');
     } else {
       alert('Type in valid todo!');
     }
@@ -21,6 +21,6 @@ const InputTodo = ({ addTodo }) => {
       <button type="button" className="btn no-border" onClick={newTodo}>+</button>
     </div>
   );
-}
+};
 
 export default InputTodo;

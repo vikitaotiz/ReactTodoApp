@@ -10,6 +10,6 @@ const Navbar = () => {
       </ul>
     </div>
   );
-}
+};
 
 export default Navbar;

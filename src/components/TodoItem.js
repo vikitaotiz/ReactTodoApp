@@ -2,7 +2,7 @@ const TodoItem = ({ todo, toggleTodo, removeTodo, upateTodo }) => {
   const editTodo = (e) => {
     if (e.keyCode === 13) {
         e.preventDefault();
-        upateTodo(Number(e.target.id), e.target.textContent)
+        upateTodo(Number(e.target.id), e.target.textContent);
     }
   };
 
@@ -20,6 +20,6 @@ const TodoItem = ({ todo, toggleTodo, removeTodo, upateTodo }) => {
         <button className="del-btn" onClick={() => removeTodo(todo.id)}>X</button>
     </div>
   );
-}
+};
 
 export default TodoItem;

@@ -1,9 +1,7 @@
 const Header = () => {
-    return (
-        <div>
-            Todos Application
-        </div>
-    );
-}
+  return (
+    <div>Todos Application</div>
+  );
+};
 
 export default Header;
