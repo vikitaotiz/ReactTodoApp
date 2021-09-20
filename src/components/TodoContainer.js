@@ -14,6 +14,15 @@ const TodoContainer = () => {
         { id: 6, text: 'Todos Six', completed: true },
         { id: 7, text: 'Todos Seven', completed: false },
     ]);
+
+    const toggleTodo = (id) => {
+        setTodos(todos.map((todo) => todo.id === id ? {...todo, completed: !todo.completed} : todo))
+    }
+
+    const removeTodo = (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    }
+
     return (
         <div>
           <div className="grid">
@@ -21,7 +30,9 @@ const TodoContainer = () => {
                 <div className="full-height pad">
                     <Header />
                     <InputTodo/>
-                    <TodosList todos={todos}/>
+                    {todos.length > 0 ?
+                        <TodosList todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo} /> : 'No Todos'
+                    }
                 </div>
           </div>
         </div>

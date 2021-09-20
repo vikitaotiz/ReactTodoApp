@@ -41,3 +41,11 @@ body {
 .no-border {
   border: none;
 }
+
+.del-btn {
+  float: right;
+  color: red;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+}
