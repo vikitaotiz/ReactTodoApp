@@ -1,7 +1,3 @@
-const Header = () => {
-  return (
-    <div>Todos Application</div>
-  );
-};
+const Header = () => <div>Todos Application</div>;
 
 export default Header;
