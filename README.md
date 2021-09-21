@@ -14,8 +14,8 @@ This is a simple todo-application project setup using react js.
 - Click on the `Code` green button
 - By the right end of the read-only input containing the repository link click the clipboard icon to copy the link
 - In your local PC, open your terminal in the folder you would like to clone the repository into
-- Clone the repository with the command: `git clone (copied link)`; like so: `git clone https://github.com/vikitaotiz/math-magician.git`
-- After the clone, type in the command `cd math-magician` to access the app directory on the terminal
+- Clone the repository with the command: `git clone (copied link)`; like so: `git clone https://github.com/vikitaotiz/ReactTodoApp.git`
+- After the clone, type in the command `cd ReactTodoApp.git` to access the app directory on the terminal
 - Run `npm install` to get all the project dependancies.
 - Run `npm run start` to start the dev-server.
 
